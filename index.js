@@ -56,12 +56,11 @@ function counter2() {
 
 Write a function called `inning` that generates a random number of points that a team scored in an inning. This should be a whole number between 0 and 2. */
 
-function inning(/*Code Here*/){
-
-    /*Code Here*/
+function inning(score){
+   return Math.floor(Math.random() * Math.floor(score));
 
 }
-
+console.log(inning(3));
 /* Task 3: finalScore()
 
 Write a higher order function called `finalScore` that accepts the callback function `inning` (from above) and a number of innings and and returns the final score of the game in the form of an object.
@@ -76,12 +75,16 @@ finalScore(inning, 9) might return:
 
 */ 
 
-function finalScore(/*code Here*/){
-
-  /*Code Here*/
+function finalScore(innings){
+innings=9;
+  let homeScore = inning(3) * innings * Math.random(2);
+  let finalHomeScore = Math.ceil(homeScore);
+  let awayScore = inning(3) * innings * Math.random(2);
+  let finalAwayScore = Math.floor(awayScore);
+  return `the home score was ${finalHomeScore} and the away score ${finalAwayScore}`
 
 }
-
+console.log(finalScore(4))
 /* Task 4: 
 
 Create a function called `scoreboard` that accepts the following parameters: 
@@ -103,8 +106,38 @@ and returns the score at each pont in the game, like so:
 
 Final Score: 6 - 10 */
 
-function scoreboard(/* CODE HERE */) {
-  /* CODE HERE */
-}
+function scoreboard(inningNumber) {
+  inningNumber = 1;
+  let homeScore1st = inning(3) * inningNumber * Math.random(2);
+  homeScore1st = Math.ceil(homeScore1st);
+  let awayScore1st = inning(3) * inningNumber * Math.random(2);
+  awayScore1st = Math.floor(awayScore1st);
 
+  let homeScore2nd = inning(3) * inningNumber * Math.random(2);
+  homeScore2nd = Math.ceil(homeScore2nd);
+  let awayScore2nd = inning(3) * inningNumber * Math.random(2);
+  awayScore2nd = Math.floor(awayScore2nd);
+
+  let homeScore1st = inning(3) * inningNumber * Math.random(2);
+  homeScore1st = Math.ceil(homeScore1st);
+  let awayScore1st = inning(3) * inningNumber * Math.random(2);
+  awayScore1st = Math.floor(awayScore1st);
+
+  let homeScore1st = inning(3) * inningNumber * Math.random(2);
+  homeScore1st = Math.ceil(homeScore1st);
+  let awayScore1st = inning(3) * inningNumber * Math.random(2);
+  awayScore1st = Math.floor(awayScore1st);
+
+
+  return `1st inning: ${homeScore1st} - ${awayScore1st}
+  2nd inning: ${homeScore2nd} - ${awayScore2nd}
+  3rd inning: ${homeScore3rd} - ${awayScore3rd}
+  4th inning: ${homeScore4th} - ${awayScore4th}
+  5th inning: ${homeScore5th} - ${awayScore5th}
+  6th inning: ${homeScore6th} - ${awayScore6th}
+  7th inning: ${homeScore7th} - ${awayScore7th}
+  8th inning: ${homeScore8th} - ${awayScore8th}
+  9th inning: ${homeScore9th} - ${awayScore9th}`
+}
+console.log(scoreboard())
 
