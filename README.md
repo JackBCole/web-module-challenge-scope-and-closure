@@ -42,7 +42,7 @@ Find the file `index.js` and complete the tasks.
 Edit the `ReadMe` file with your answers.
 
 1. In your own words, define closure (1-2 sentences).
-
+A closure is a way get outside the function scope from the inner function. It's both the enclosed function with references to its outer state.
 2. Study the following code, then answer the questions below.
 
 
@@ -66,10 +66,14 @@ dansRoll();
 
 a. Where is closure used in this code? How can you tell?
 
+the closure is the funciton within the personalDice() function, I can tell because this inner function is nested 
+
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
 
-c. What is the lexical scope of `newRoll`? 
+The name of Dan stays the same and the number rolled could change.
 
+c. What is the lexical scope of `newRoll`? 
+the lexical scope of newRoll is within the personalDice function
 
 ### Task 2c - Exit Ticket
 
