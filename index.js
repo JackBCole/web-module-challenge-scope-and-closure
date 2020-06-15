@@ -27,11 +27,11 @@ function processFirstItem(stringList, callback) {
  * Study the code for counter1 and counter2. Answer the questions below.
  * 
  * 1. What is the difference between counter1 and counter2?
- * 
+ *  counter2() uses a closure statement while counter1() does not
  * 2. Which of the two uses a closure? How can you tell?
- * 
+ * the variable is outside of the function.
  * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better? 
- *
+ * If you did not need to access a variable outside of the function.
 */
 
 // counter1 code
@@ -74,6 +74,7 @@ finalScore(inning, 9) might return:
 }
 
 */ 
+
 
 function finalScore(innings){
 innings=9;
