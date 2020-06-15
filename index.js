@@ -108,25 +108,55 @@ Final Score: 6 - 10 */
 
 function scoreboard(inningNumber) {
   inningNumber = 1;
-  let homeScore1st = inning(3) * inningNumber * Math.random(2);
+  let homeScore1st = inning(3) * inningNumber * Math.random(1);
   homeScore1st = Math.ceil(homeScore1st);
   let awayScore1st = inning(3) * inningNumber * Math.random(2);
   awayScore1st = Math.floor(awayScore1st);
 
-  let homeScore2nd = inning(3) * inningNumber * Math.random(2);
-  homeScore2nd = Math.ceil(homeScore2nd);
+  let homeScore2nd = inning(3) * inningNumber * Math.random(1);
+  homeScore2nd = Math.ceil(homeScore2nd) + homeScore1st;
   let awayScore2nd = inning(3) * inningNumber * Math.random(2);
-  awayScore2nd = Math.floor(awayScore2nd);
+  awayScore2nd = Math.floor(awayScore2nd) + awayScore1st;
 
-  let homeScore1st = inning(3) * inningNumber * Math.random(2);
-  homeScore1st = Math.ceil(homeScore1st);
-  let awayScore1st = inning(3) * inningNumber * Math.random(2);
-  awayScore1st = Math.floor(awayScore1st);
+  let homeScore3rd = inning(3) * inningNumber * Math.random(1);
+  homeScore3rd = Math.ceil(homeScore3rd) + homeScore2nd;
+  let awayScore3rd = inning(3) * inningNumber * Math.random(1);
+  awayScore3rd = Math.floor(awayScore3rd) + awayScore2nd;
 
-  let homeScore1st = inning(3) * inningNumber * Math.random(2);
-  homeScore1st = Math.ceil(homeScore1st);
-  let awayScore1st = inning(3) * inningNumber * Math.random(2);
-  awayScore1st = Math.floor(awayScore1st);
+  let homeScore4th = inning(3) * inningNumber * Math.random(1);
+  homeScore4th = Math.ceil(homeScore4th) + homeScore3rd;
+  let awayScore4th = inning(3) * inningNumber * Math.random(2);
+  awayScore4th = Math.floor(awayScore4th) + awayScore3rd;
+
+  let homeScore5th = inning(3) * inningNumber * Math.random(1);
+  homeScore5th = Math.ceil(homeScore5th) + homeScore4th;
+  let awayScore5th = inning(3) * inningNumber * Math.random(2);
+  awayScore5th = Math.floor(awayScore5th) + awayScore4th;
+
+  let homeScore6th = inning(3) * inningNumber * Math.random(1);
+  homeScore6th = Math.ceil(homeScore6th) + homeScore5th;
+  let awayScore6th = inning(3) * inningNumber * Math.random(2);
+  awayScore6th = Math.floor(awayScore6th) + awayScore5th;
+
+  let homeScore7th = inning(3) * inningNumber * Math.random(1);
+  homeScore7th = Math.ceil(homeScore7th) + homeScore6th;
+  let awayScore7th = inning(3) * inningNumber * Math.random(1);
+  awayScore7th = Math.floor(awayScore7th) + awayScore6th;
+
+  let homeScore8th = inning(3) * inningNumber * Math.random(1);
+  homeScore8th = Math.ceil(homeScore8th) + homeScore7th;
+  let awayScore8th = inning(3) * inningNumber * Math.random(1);
+  awayScore8th = Math.floor(awayScore8th) + awayScore7th;
+
+  let homeScore9th = inning(3) * inningNumber * Math.random(1);
+  homeScore9th = Math.ceil(homeScore9th) + homeScore8th;
+  let awayScore9th = inning(3) * inningNumber * Math.random(1);
+  awayScore9th = Math.floor(awayScore9th) + awayScore8th;
+
+  // let homeScore1st = inning(3) * inningNumber * Math.random(2);
+  // homeScore1st = Math.ceil(homeScore1st);
+  // let awayScore1st = inning(3) * inningNumber * Math.random(2);
+  // awayScore1st = Math.floor(awayScore1st);
 
 
   return `1st inning: ${homeScore1st} - ${awayScore1st}
@@ -137,7 +167,15 @@ function scoreboard(inningNumber) {
   6th inning: ${homeScore6th} - ${awayScore6th}
   7th inning: ${homeScore7th} - ${awayScore7th}
   8th inning: ${homeScore8th} - ${awayScore8th}
-  9th inning: ${homeScore9th} - ${awayScore9th}`
+  9th inning: ${homeScore9th} - ${awayScore9th}
+
+  final Score: ${homeScore9th} - ${awayScore9th}
+  `
+
+  
 }
 console.log(scoreboard())
 
+
+  
+   
